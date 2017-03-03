@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="calendar" data-role="page">
+         <input type='hidden' value='' id='calendarVal'>
+              <input type='hidden' value='' id='calendarJson'>
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none"><i class="icon-chevron-left"></i></a>
+            <div class="day-show">
+                <span class="month" style="display:none;"><span></span>月</span>
+                <span id="calendar_year" class="year"><i class="icon-down-arrow"></i></span>
+            </div>
+            <!-- segmented-control -->
+            <div class="section-inner2">
+                <span class="segmented">
+                    <label><input type="radio" name="sc-1" id="sc-1-1" data-role="none"><span class="label" for="sc-1-1" data-value="list"><i class="icon-day"></i></span></label>
+                    <label><input type="radio" name="sc-1" id="sc-1-2" data-role="none" checked><span class="label" for="sc-1-2" data-value="month"><i class="icon-gas-list"></i></span></label>
+                </span>
+            </div>
+            <!-- /segmented-control -->
+        </div>
+        <!-- /header -->
+        <!-- content -->
+        <div class="calendar-content" data-position="fixed" style="background-color:#fff;">
+            <div style="background-color:#fff;">
+                <!-- 月曆模式 -->
+                <div id="segmented-div-a" style="display:none;">
+                    <!-- 設高度(全頁面高-頭-尾) -->
+                    <!-- 日曆 -->
+                    <div class="calendar-mode">
+                        <!-- 設calendar-mode高度 -->
+                        <table class="clndr-table" border="0" cellspacing="0" cellpadding="0">
+                            <thead>
+                                <tr class="header-days">
+                                    <td class="header-day">日</td>
+                                    <td class="header-day">一</td>
+                                    <td class="header-day">二</td>
+                                    <td class="header-day">三</td>
+                                    <td class="header-day">四</td>
+                                    <td class="header-day">五</td>
+                                    <td class="header-day">六</td>
+                                </tr>
+                            </thead>
+                        </table>
+                        <!-- 日曆切換區塊 -->
+                        <div class="swiper-container"><!-- swiper-container的高度設定為clndr-table的高度 -->
+                            <div class="swiper-wrapper">
+                            </div>
+                            <div class="swiper-pagination" style="display:none;"></div>
+                        </div>
+                        <!-- /日曆切換區塊 -->
+                    </div>
+                    <!-- /日曆 -->
+                    <!-- 日期顯示 -->
+                    <div class="full-day-show">
+                        <span></span><span></span><span>(今天)</span>
+                        <p>
+                            <span class="lunar-tag">農曆</span>
+                            <span class="lunar"></span>
+                        </p>
+                    </div>
+                    <!-- /日期顯示 -->                   
+                    <!-- 活動事項 -->
+                    <div class="lunarWrap" ><!-- 設lunarWrap高度 -->
+                        <div class="view-list">
+                            <ul id="calendarViewList">
+                                <!-- <li>
+                                    <a href=" ">
+                                        <div class=" info">
+                                            <i class="icon-dot"></i>
+                                            <h4><span class="title">聖誕節晚會</span></h4>
+                                            <div>
+                                                <p class="time">上午 03:30 - 上午 05:30</p>
+                                                <p class="txt">今網企業大樓</p>  //v1.2 新增
+                                                <i class="icon-calendar addtoCal-tag"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li> -->
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /活動事項 -->
+                </div>
+                <!-- /月曆模式 -->
+                <!-- 列表模式 -->
+                <div id="segmented-div-b" style="display:block;">
+                    <div style="background-color:#f9fafc;padding: 15px 0 0;" id='timelineDom'>
+                   
+                    </div>
+                </div>
+                <!-- /列表模式 -->
+                <!-- 活動事項內容檢視 -->
+                <div class="detailWrap" style="display:none;">
+                              <div class="theme-red">
+                        <div class="top-area">
+                            <i class="icon-close close"></i>
+                            <span class="title"></span>
+                            <span class="addtoCal-tag"></span>
+                        </div>
+                        <div class="bottom-area">
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <input type="hidden" />
+                                        <input type="hidden" />
+                                        <input type="hidden" />
+                                        <input type="hidden" id="com" />
+                                        <i class="icon-clock-2"></i>
+                                        <div class="info">
+                                            <p></p>
+                                            <p></p>
+                                            <p class="addtoCal-tag">加入行事曆</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="icon-pin-full"></i>
+                                        <div class="info">
+                                            <p></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="icon-detail"></i>
+                                        <div class="info">
+                                            <p>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="fileWrap">
+                                    <a href="">
+                                        <i class="icon-folder"></i>
+                                        <div class="info">
+                                            <ul>
+
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /活動事項內容檢視 -->
+            </div>
+
+        </div>
+        <!-- /content -->
+        <!-- footer -->
+        <div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="tab-bar">
+                <ul>
+                    <li>
+                        <a>
+                            <i class="icon-home"></i>
+                            <div>首頁</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-package"></i>
+                            <div>我的包裹</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-barcode"></i>
+                            <div>我的條碼</div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a>
+                            <i class="icon-calendar2"></i>
+                            <div>社區行事曆</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-more"></i>
+                            <div>更多</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /footer -->
+    </div>
+</body>
+</html>
+

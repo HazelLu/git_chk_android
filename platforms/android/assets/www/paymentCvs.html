@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="paymentCvs" data-role="page">
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none" ><i class="icon-chevron-left"></i></a>
+            <h1>繳交管理費</h1>
+            <a href="" class="btn-right" data-role="none"><i class="icon-more-detail-2"></i></a>
+        </div>
+        <!-- /header -->
+        <!-- content -->
+        <div class="paymentCvs-content" data-position="fixed">
+            <!-- 詳細繳費明細 -->
+            <div id="" class="alert-p-content" style="display:none;">
+                <div class="container"><!-- 此div請計算頁面總高度 margin-top:-(高度)/2-->
+                    <div class="title">
+                        <h4>管理費明細</h4>
+                    </div>
+                    <div class="info">
+                        <div class="txt">
+                            <h4 id="fee_name"></h4>
+                            <span class="tablet" id="fee_tablet"></span>
+                            <ul id="fee_list">
+                            </ul>
+                            <span class="total">共計<span class="num"><span>NT$</span></span></span>
+                            <span class="dateline"></span>
+                        </div>
+                        <div class="btn" id="alertdo">確認</div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /詳細繳費明細 -->            
+            <div class="listWrap">
+                <div class="content" data-position="fixed">
+                    <!-- 繳費資訊 -->
+                    <div class="desc_txt">
+                        <div class="txt">
+                            <h5><span ></span></h5>
+                            <!-- <p></p> -->
+                            <p class="pay">
+                                應繳金額<span class="b">$</span><span class="amount"></span>
+                            </p>
+                            <a id="saveCode" class="save-btn">儲存條碼</a>
+                        </div>
+                    </div>
+                    <!-- /繳費資訊 -->
+                    <!-- navbar -->
+                    <div class="navbar">
+                        <ul>
+                            <li class="col-2">
+                                <a href="#tab1" id="t1" class="active" data-role="none">超商條碼</a>
+                            </li>
+                            <li class="col-2">
+                                <a href="#tab2" id="t2" data-role="none">銀行條碼</a>
+                            </li>
+                            <li class="col-2" style="display:none;">
+                                <a href="#tab3" id="t3" data-role="none">ATM</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /navbar -->                   
+            <div>
+            <!-- 繳費條碼 (超商) -->
+            <div id="tab1">
+                <div class="cvsPay">
+                    <div class="desc_txt_02">
+                        <div class="cvs">
+                            適用店家
+                            <img src="img/payment/711.jpg" />
+                            <img src="img/payment/FM.jpg" />
+                            <img src="img/payment/HL.jpg" />
+                            <img src="img/payment/OK.jpg" />
+                        </div>
+                        <div class="cvs">繳費期限 <span class="bank-name" id="bk_due"></span></div>
+                        <!-- <div class="switch-wrap">
+                            <span>調整亮度</span>
+                            <div class="flipswitch">
+                                <div class="switch">
+                                    <div class="onoffswitch">
+                                        <input id="bright_cbx" class="cmn-toggle cmn-toggle-round" type="checkbox" data-role="none" checked="checked">
+                                        <label for="bright_cbx"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div style="position:relative;display:none;" class="cvs-barcode">
+                        <span class="tips">開啟此條碼頁面進行繳費</span>
+                        <ul class="barcode">
+                            <li>
+                                <div id="barcode1" style="width: 55%; height: 50px;margin:0px auto;background-color:#ccc;"></div>
+                                <div style="height:4px;"></div>
+                                <span class="barcode_txt"><!--繳款期限:<span class="cvs_due"></span> --> 代收代碼:<span id="cvs_sn"></span></span>
+                            </li>
+                            <li>
+                                <div id="barcode2" style="width: 90%; height: 50px;margin:0px auto;background-color:#ccc;"></div>
+                                <div style="height:4px;"></div>
+                                <span class="barcode_txt">代號:<span id="cvs_market"></span>  住戶編號:<span id="cvs_cust"></span></span>
+                            </li>
+                            <li>
+                                <div id="barcode3" style="width: 86%; height: 50px;margin:0px auto;background-color:#ccc;"></div>
+                                <div style="height:4px;"></div>
+                                <span class="barcode_txt">校對碼:<span id="cvs_code"></span>  應繳金額:<span id="cvs_total"></span></span>
+                            </li>
+                        </ul>
+                    </div>     
+                    <div style="position:relative;">
+                        <!-- 逾繳費期限時顯示 已設display:none;-->
+                        <div class="empty" >
+                            <div class="txt-box">
+                                <i class="icon-time"><span class="icon-time"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span></span></i>
+                                <span class="txt01">逾繳費期限!</span>
+                                <span class="txt02">請至<span id="bk_name">台中銀行</span>各分行臨櫃繳費</span>
+                            </div>
+                        </div>
+                        <!-- /逾繳費期限時顯示 -->                        
+                        <!-- 已完成繳費顯示 已設display:none;-->
+                        <div class="empty-check">
+                            <div class="txt-box">
+                                <i class="icon-savings"><span class="icon-savings"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span></span></i>
+                                <span class="txt01">已完成繳費!</span>
+                            </div>
+                        </div>
+                        <!-- /已完成繳費顯示 -->
+                    </div> 
+                    <div class="note">
+                            貼心提醒<br />
+                            <ul class="t">
+                                <li></li>
+                                <li>若無法順利讀取條碼，請將手機亮度之顯示值調整至最亮，再試一次。</li>
+                                <li>部分手機受限螢幕解析度辨識影響，將無法使用本功能。</li>
+                            </ul>
+                    </div>                             
+                </div>
+            </div>
+            <!-- /繳費條碼 (超商)-->
+            <!-- 繳費條碼 (銀行)-->
+            <div id="tab2" style="display:none;">
+                <div class="desc_txt_02">
+                    <div class="cvs">適用銀行 <span class="bank-name" id='bk_name2'></span></div>
+                    <div class="cvs">繳費期限 <span class="bank-name" id='bk_due2'></span></div>
+                    <!-- <span class="tips">開啟此條碼頁面進行繳費</span> -->
+                </div>
+                <div style="position:relative;" id="bank_barcode">
+                    <ul class="barcode">
+                        <li>
+                            <div id="code1" style="width: 90%; height: 50px;margin:0px auto;background-color:#ccc;"></div>
+                            <div style="height:4px;"></div>
+                            <span class="barcode_txt">條碼一：<span id="cvs_code1"></span></span>
+                        </li>
+                        <li>
+                            <div id="code2" style="width: 90%; height: 50px;margin:0px auto;background-color:#ccc;"></div>
+                            <div style="height:4px;"></div>
+                            <span class="barcode_txt">條碼二：<span id="cvs_code2"></span></span>
+                        </li>
+                        <li id="is_code3" style="display:none;">
+                            <div id="code3" style="width: 90%; height: 50px;margin:0px auto;background-color:#ccc;"></div>
+                            <div style="height:4px;"></div>
+                            <span class="barcode_txt">條碼三：<span id="cvs_code3"></span></span>
+                        </li>
+                    </ul>
+                </div>
+                <div style="position:relative;">
+                    <!-- 已完成繳費顯示 已設display:none;-->
+                    <div class="empty-check">
+                        <div class="txt-box">
+                            <i class="icon-savings"><span class="icon-savings"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span></span></i>
+                            <span class="txt01">已完成繳費!</span>
+                        </div>
+                    </div>
+                    <!-- /已完成繳費顯示 -->
+                </div>    
+                <div class="note">
+                    貼心提醒<br />
+                    <ul class="t">
+                        <li>若無法順利讀取條碼，請將手機亮度之顯示值調整至最亮，再試一次。</li>
+                        <li>部分手機受限螢幕解析度辨識影響，將無法使用本功能。</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /繳費條碼 (銀行)-->
+            <!-- ATM資訊 -->
+            <div id="tab3" style="display:none;">
+                <div class="desc_txt_02">
+                    <div class="atmWrap">
+                        <div>銀行代碼：<span id="atm_sn"></span>(<span id="atm_name"></span>)</div>
+                        <div>ATM繳費帳號：<span id="atm_account"></span></div>
+                    </div>
+                    <div class="atmNotes">
+                    </div>
+                    <div style="position:relative;">
+                        <!-- 已完成繳費顯示 已設display:none;-->
+                         <div class="empty-check">
+                            <div class="txt-box">
+                                <i class="icon-savings"><span class="icon-savings"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span></span></i>
+                                <span class="txt01">已完成繳費!</span>
+                                <!--<span class="txt02">請至<span>台中銀行</span>各分行臨櫃繳費</span>-->
+                            </div>
+                        </div>
+                        <!-- /已完成繳費顯示 -->
+                    </div>
+                    <div class="note">
+                        貼心提醒<br />
+                        <ul class="t">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /ATM資訊 -->  
+        </div>
+                             
+                </div>
+            </div>
+        </div>
+        <!-- /content -->
+    </div>
+</body>
+</html>
+

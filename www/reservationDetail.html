@@ -1,0 +1,194 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="reservationDetail" data-role="page">
+               <!-- 隱藏式 header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none" id="res_back"><i class="icon-chevron-left"></i></a>
+            <h1></h1>
+            <a class="btn-right-reservation" data-role="none" id="heartBtn">
+                <!--未加我的最愛↓-->
+                <i class="icon-heart"><span class="path1"></span><span class="path2"></span></i>
+                <!--已加我的最愛↓-->
+                <!--<i class="icon-heart-full"></i>-->
+            </a>
+        </div>
+        <!-- /隱藏式 header -->
+
+        <div class="reservationDetail-content">
+            <input type="hidden" id="descHeight" />
+            <!-- top area -->
+            <div class="r-banner-content" style="position: relative;">
+                <!-- 社區公設實際環境圖片輪播 -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper" id="pf_img_slide">
+                      
+                    </div>
+                </div>
+                <!-- /社區公設實際環境圖片輪播 -->
+                <!-- 公設名稱 -->
+                <div class="titleName">
+                    <div class="txt-box">
+                        <span class="r-cgy"></span>
+                    </div>
+                    <div class="titleIcon" style="display:none;">
+                        <i class=""></i><!-- 依不同分類給予不同的icon class -->
+                    </div>
+                </div>
+                <!-- /公設名稱 -->
+            </div>
+            <!-- /top area -->
+
+            <!-- bottom area -->
+            <div class="r-info-content">
+                <!-- 詳細資料 -->
+                <div class="titleWrapper" style="display:none;">
+                    <div class="titleItem">
+                        <span></span>點
+                        <p>單位時間  戶別 /</p>
+                    </div>
+                </div>
+                <!-- /詳細資料 -->
+                <div class="detailWrapper">
+                    <!-- 開放時間 -->
+                    <div class="detailItem">
+                        <h3>開放時間
+                            <span class="timeList">
+                                <i class="icon-clock"></i>
+                                <span>查看完整時間表</span>
+                            </span>
+                        </h3>
+                        <p class="day"></p>
+                    </div>
+                    <!-- /開放時間 -->
+                    <!-- 預約規則 -->
+                    <div class="detailItem">
+                        <h3>公設說明 <span class="resPoint"></span></h3><!-- 預約扣點/入場扣點 -->
+                        <div class="moreWrap ruleWrap">
+                            <p>扣點單位 <span class="subDetail"><span id="point" style="font-weight:700;"></span> 點 / <span id="point_rule"></span></span></p><!-- 5點/戶（不限使用時間） -->
+                            <p>使用時間單位 <span class="subDetail">每<span id="min_hour"></span><span id="min_hour_rule">小時</span></span></p>
+                            <p id="resRule">預約次數限制 <span class="subDetail"><span id="min_day"></span>天<span id="min_count"></span>次 / <span>戶</span></span></p>
+                            <!-- 為預約扣點制時顯示 css已設display:none; -->
+                            <!-- <div class="notes">
+                                <span>※ 預約扣點制，當您取消預約時，系統將「不自動回補」點數。(若有問題請洽社區管理室)</span>
+                            </div> -->
+                            <!-- /為預約扣點制時顯示 css已設display:none; -->
+                        </div>
+                    </div>
+                    <!-- /預約規則 -->
+                    <!-- 設施簡介 -->
+                    <div class="detailItem">
+                        <h3>公設簡介</h3>
+                        <div class="moreWrap introWrap">
+                            <div id="pf_desc">
+                                
+                            </div>
+                        </div>
+                        <div class="infoCollapseWrap">
+                            <i class="icon-down-arrow"></i>
+                            <span class="more introLink">
+                                顯示更多<!--顯示更多/關閉-->
+                            </span>
+                        </div>
+                    </div>
+                    <!-- /設施簡介 -->
+                    <!-- 人數限制 -->
+                    <div class="detailItem">
+                        <h3>人數限制</h3>
+                        <p>場地人數上限 <span class="subDetail"><span id="max_people"></span>人</span></p>
+                        <p>開放線上預約名額 <span class="subDetail"><span id="max_res"></span>人</span></p>
+                    </div>
+                    <!-- /人數限制 -->
+                    <!-- 預約取消須知 -->
+                    <div class="detailItem">
+                        <h3>預約取消須知</h3>
+                        <!-- case01:設定的取消時間限制大於0 -->
+                        <div class="case01" style="display:none;">
+                            <p class="point"><span id="cancel_time"></span>前</p>
+                            <p>如需取消預約請於<span id="cancel_time2"></span>前完成，已扣除之點數將不予以歸還。(實際點數計算規則依社區規定為主）</p>
+                        </div>
+                        <!-- /case01:設定的取消時間限制大於0 -->
+                        <!-- case02:無取消時間限制 -->
+                        <div class="case02" style="display:none;"> 
+                            <p class="point">不限制時間</p>
+                            <p>預約時間到前皆可取消預約，已扣除之點數將不予以歸還。(實際點數計算規則依社區規定為主)</p>
+                        </div>
+                        <!-- /case02:無取消時間限制 -->                        
+                    </div>
+                    <!-- /預約取消須知 -->
+                    <!-- 類似公設 -->
+                     <div class="detailItem similarItem" style="margin:0;padding:0;overflow:hidden;"><!--css已設display:none;-->
+                        <div style="padding:25px 35px 20px 20px;">
+                        <h3>類似公設</h3>
+                        <div class="swiper-container-2" >
+                            <div class="swiper-wrapper" id="similar">
+
+                            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /類似公設 -->
+                </div>
+            </div>
+            <!-- /bottom area -->
+            </div>
+            <!-- css已射display:none; -->
+            <a id="toReservation" >
+                <div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false" >
+                    <p>我要預約</p>
+                </div>
+            </a>
+            <!-- /css已射display:none; -->
+            <!-- slide up 視窗:開放時間 css已設display:none; -->
+            <div class="openTimeWrap" >
+                <div style="height: 52px;">
+                    <div class="sp_header">
+                        <h1>開放時間表</h1>
+                        <div id="tableName"></div><!--代入公設名稱-->
+                        <i class="icon-close close"></i>
+                    </div>
+                </div>
+                <div style="margin: 0 15px;height: 83%; overflow: hidden;border-left:1px solid #bbb;">
+                    <table class="weekHeader"> 
+                        <thead>
+                            <tr>
+                                <th> </th>
+                                <th>一</th>
+                                <th>二</th>
+                                <th>三</th>
+                                <th>四</th>
+                                <th>五</th>
+                                <th>六</th>
+                                <th>日</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="openTimeContent">
+                    </div>
+                </div>
+                <div class="flagTip">
+                    <div class="flag"></div>
+                    <span>為開放時段；單位 (小時)</span>
+                </div>
+            </div>
+            <!-- /slide up 視窗:開放時間 css已設display:none; -->
+            <!-- 常用公設 css已設display:none;-->
+            <div class="copySuccess favorite">
+                <div class="copy-wrapper">
+                    <div class="content">
+                        <i class="icon-heart-full"></i>
+                        <div class="txt">已加入 常用公設</div>
+
+                        <!-- <i class="icon-heart-nonfull"></i>
+                        <div class="txt">取消常用公設</div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- /常用公設 --> 
+    </div>
+</body>
+</html>

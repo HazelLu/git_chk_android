@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="postal" data-role="page">
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none"><i class="icon-chevron-left"></i><span></span></a>
+            <h1>我的包裹</h1>
+            <!-- <a class="btn-right-postal" data-role="none"><i class="icon-barcode"></i>領包裹</a> -->
+            <!-- navbar -->
+            <div class="navbar">
+                <ul>
+                    <li><a href="#segmented-div-a" data-role="none"><span>未領取</span></a></li><li><a href="#segmented-div-b" data-role="none"><span>已領取</span></a></li><li><a href="#segmented-div-c" data-role="none" ><span>退貨狀態</span></a></li>
+                </ul>
+            </div>
+            <!-- /navbar -->  
+        </div>
+        <!-- header -->
+
+        <!-- content -->
+        <div class="postal-content" data-position="fixed">
+            
+            <!-- 未領取 -->
+            <div id="segmented-div-a" >
+                <ul id="postalList" >
+         
+                </ul>
+                <span class="tips-div-a" style="display:none;">請持手機識別碼到管理室領取<a  class="howto">如何領取包裹?</a></span>
+            </div>
+            <!-- /未領取 -->
+            <!-- 已領取 -->
+            <div id="segmented-div-b" >
+                <ul id="getPostal" class="mr30">
+
+                </ul>
+            </div>
+            <!-- /已領取 -->
+            <!-- 退貨物流 -->
+            <div id="segmented-div-c" >
+                <ul id="returnPostalList" class="mr30">
+                    
+                </ul>
+            </div>
+            <!-- /退貨物流 -->
+             <!-- 無資料時顯示 -->
+            <div class="empty">
+                <i class="icon-package"></i>
+                <span>目前尚無資料</span>
+            </div>
+            <!-- /無資料時顯示 --> 
+        </div>
+        <!-- /content -->
+        <!-- footer -->
+        <div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="tab-bar">
+                <ul>
+                    <li>
+                        <a>
+                            <i class="icon-home"></i>
+                            <div>首頁</div>                         
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a >
+                            <i class="icon-package"></i>
+                            <div>我的包裹</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-barcode"></i>
+                            <div>我的條碼</div>
+                        </a>
+                    </li>
+                    <li >
+                        <a>
+                            <i class="icon-men-admin-s"></i>
+                            <div>個人資訊</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-more"></i>
+                            <div>更多</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /footer -->
+        <!-- 包裹領取引導 -->
+        <div class="guide-postal-content" >
+            <div class="container">
+                <!-- style="top:XX;" 設為header高度-10px -->
+                <img src="img/guide/postal-01.png" />
+                <img src="img/guide/postal-02.png" class="mr" />
+            </div>
+            <div class="container part2" >
+                <img src="img/guide/postal-03.png"  />
+            </div>
+        </div>
+        <!-- /包裹領取引導 -->        
+    </div>
+</body>
+</html>

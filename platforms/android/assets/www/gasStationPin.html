@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="gasStationPin" data-role="page">
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none"><i class="icon-chevron-left"></i></a>
+            <h1 id="pagename"></h1>
+        </div>
+        <!-- /header -->
+        <!-- content -->
+        <div class="gasStationPin-content" data-position="fixed" ><!-- 此div請計算頁面總高度 -->
+                <div class="map-layout" id="map_canvas">
+                </div>
+                <div class="map-info">
+                    <div class="more-tab">更多資訊</div>
+                    <h4></h4>
+                    <ul>
+                        <li>
+                            <a id="stn_add">
+                                <input type="hidden" value="" />
+                                <p id="stn_address"></p>
+                                <i class="icon-pin"></i>
+                            </a>
+                        </li>
+                    </ul>                
+                    <ul class="more-ul"> 
+<!--                    <li>
+                            <a id="stn_add">
+                                <input type="hidden" value="" />
+                                <p id="stn_address"></p>
+                                <i class="icon-pin"></i>
+                            </a>
+                        </li> -->
+                        <li>
+                            <a id="stn_t">
+                                <p id="stn_tel"></p>
+                                <i class="icon-phone"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <p>
+                                    <span class="subtitle">營業時間</span>
+                                    <span id="stn_isopen" class="tag">營業中</span>
+                                    <span id="stn_open" class="subtxt"></span>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <p>
+                                    <span class="subtitle">油品種類</span>
+                                    <span class="subtxt" id="stn_gastype"></span>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <p>
+                                    <span class="subtitle">服務提供</span>
+                                    <span class="subtxt" id="stn_service"></span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <!-- /content -->
+    </div>
+</body>
+</html>

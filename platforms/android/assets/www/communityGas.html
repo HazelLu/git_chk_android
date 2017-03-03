@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="communityGas" data-role="page">
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none"><i class="icon-chevron-left"></i></a>
+            <h1>瓦斯抄表</h1>
+            <a id="gasEdit" class="btn-right-gasmeter" data-role="none" style="display:none;">送出</a>
+            <!--<a class="btn-right-postal" data-role="none">儲存</a>-->
+        </div>
+        <!-- /header -->
+        <!-- content -->
+        <div class="communityGas-content" data-position="fixed">
+            <input type="hidden" id="g_id" >
+            <input type="hidden" id="tabletId" >
+            <div class="gas-meter" style="">
+                <!--height設為總高的40%-->
+                <div class="panel">
+                    <ul class="fill-in">
+                        <!-- 度數異常時加上.error -->
+                        <!--<i class="icon-cursor"></i>-->
+                        <li>
+                            <!-- 藍色游標(啟用數字鍵盤時搭配使用) -->
+                            <label id="in0_label"></label>
+                            <input id="in0" type="number"  name="" maxlength="1" class="input" value="" />
+                             <input type="hidden" value="1" />
+                            <i class="icon-click" style="display:none;"></i><!-- 手指頭(未填寫狀態時加上) -->
+                        </li>
+                        <li>
+                            <label></label>
+                            <input  id="in1" type="number" name="" maxlength="1" class="input" value=""  />
+                             <input type="hidden" value="2" />
+                        </li>
+                        <li>
+                            <label></label>
+                            <input id="in2"  type="number" name="" maxlength="1" class="input" value=""  />
+                             <input type="hidden" value="3" />
+                        </li>
+                        <li>
+                            <label></label>
+                            <input id="in3"  type="number" name="" maxlength="1" class="input" value="" />
+                             <input type="hidden" value="4" />
+                        </li>
+                    </ul>
+                </div>
+                <div class="tips">
+                    <p>
+                        請由左至右填寫四位數，紅色區塊不需填報
+                    </p>
+                </div>
+                <div class="bg">
+                    <img src="img/gas/gas-meter.jpg" alt="" />
+                </div>
+            </div>
+            <div class="yellow-tips open close">
+                 <div>
+                    <div class="box">
+                        <i class="icon-light-bulb"><span class="icon-light-bulb"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span></span></i>
+                        <p>歡迎您第一次使用瓦斯抄表服務，請於上方輸入您這期的瓦斯度數，系統將為您紀錄與回報！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gas-info">
+                <span class="tag" id="ym">-期</span><span class="tablet" id="tablet"><i class="icon-down-arrow"></i></span>
+                <div class="data">
+                    <ul>
+                        <li>
+                            上期度數：<span>無</span>
+                        </li>
+                        <li>最新填表：<!--<span>2016/8/26 18:05</span>--><span>尚未填寫</span></li> 
+                        <li>截止日期：<span class="fontR"></span></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 社區尚未開放/尚未開放登記 彈跳 -->
+            <div id="" class="alert-gas-content">
+                <!--css已設display:none;-->
+                <div class="container">
+                    <!-- 此div請計算頁面總高度 margin-top:-(高度)/2-->
+                    <div class="info">
+                        <div class="txt">
+                            <i class="icon-gas-meter"></i>
+                            <div id="gasLockDiv">
+                                <!--css已設display:none;-->
+                                <h4>社區未啟用此服務</h4>
+                                <span class="subdesc">
+                                    如有相關問題可到管理室諮詢
+                                </span>
+                            </div>
+                            <div id="gasUnopenDiv">
+                                <!--css已設display:none;-->
+                                <h4>目前尚未開放當期登記</h4>
+                                <span class="subdesc">
+                                    開放登記時間以社區公告為主
+                                </span>
+                            </div>
+                        </div>
+                        <div class="btn" id="alertdo">我知道了</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 社區尚未開放/尚未開放登記 彈跳 -->
+            <!-- 度數異常提示 -->
+            <!--
+            title: 度數異常提示
+            text:您所輸入的度數小於上期度數：1500
+            btn:我知道了
+            -->
+            <!-- /度數異常提示 -->
+        </div>
+        <!-- /content -->
+        <!-- footer -->
+        <div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="tab-bar">
+                <ul>
+                    <li>
+                        <a>
+                            <i class="icon-home"></i>
+                            <div>首頁</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-package"></i>
+                            <div>我的包裹</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-barcode"></i>
+                            <div>我的條碼</div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="icon-gas-meter"></i>
+                            <div>瓦斯抄表</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-more"></i>
+                            <div>更多</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /footer -->
+    </div>
+</body>
+</html>
+

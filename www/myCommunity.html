@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="mycommunity" data-role="page">
+        <!-- header -->
+        <!-- /header -->
+        <!-- content -->
+        <div class="mycommunity-content" data-position="fixed" style="height:504px;">
+            <div id="header" class="sticky" style="">
+                <h1>社區基本資料</h1>
+            </div>
+            <div class="subHeader">
+                <a href="moreList.html" ><i class="icon-chevron-left"></i></a>
+            </div>
+            <!-- 此div請計算頁面總高度 -->
+            <div class="picWrap">
+                    <img src="img/community/building.jpg" alt=""/>
+                    <div class="title" style="background:rgba(0,0,0,0.5);color:#fff;position:absolute;bottom:0;left:0;width: 100%;padding:12pt 8pt;">
+                        <div>
+                            <h3>今網企業大樓</h3>
+                            <span>精匠建設</span>
+                        </div>
+                    </div>
+                </div>
+            <div class="infoWrap">
+                    <ul class="basic">
+                        <li>
+                            <a id="">
+                                <p>台中市太原北路130號10樓</p>
+                                <i class="icon-pin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:0422974588" data-rel="external">
+                                <p>04-22974588</p>
+                                <i class="icon-phone"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="">
+                                <p>kingnet@net.net.tw</p>
+                                <i class="icon-mail"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="extra">
+                        <li>
+                            <a>
+                                <p>
+                                    <span class="subtitle">傳真</span>
+                                    <span class="subtxt">0422974588</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <p>
+                                    <span class="subtitle">總戶數</span>
+                                    <span class="subtxt">200戶</span>
+                                </p>
+                            </a>
+                        </li>
+                   </ul>
+                   <ul class="myStore">
+                        <li>
+                            <a href="myCommunityStore.html">
+                                <p>
+                                    <span class="subtitle">合作廠商</span>
+                                    <i class="icon-chevron-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <p>
+                                    <span class="subtitle">合作廠商</span>
+                                    <i class="icon-chevron-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <p>
+                                    <span class="subtitle">合作廠商</span>
+                                    <i class="icon-chevron-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <p>
+                                    <span class="subtitle">合作廠商</span>
+                                    <i class="icon-chevron-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <p>
+                                    <span class="subtitle">合作廠商</span>
+                                    <i class="icon-chevron-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <p>
+                                    <span class="subtitle">合作廠商</span>
+                                    <i class="icon-chevron-right"></i>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <!-- /content -->
+    </div>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100 && !$('#header').hasClass('open')) {
+                    $('#header').addClass('open');
+                    //$('#header').show();
+                } else if ($(this).scrollTop() <= 100) {
+                    $('#header').removeClass('open');
+                    //$('#header').hide();
+                }
+            });
+            //var cubuk_seviye = $(document).scrollTop();
+            //var header_yuksekligi = $('.sticky').outerHeight();
+      
+            //$(document).scroll(function () {
+            //    var kaydirma_cubugu = $(document).scrollTop();
+            //    if (kaydirma_cubugu > header_yuksekligi) { $('.sticky').removeClass('hide');}
+            //    else { $('.sticky').addClass('hide');}
+           
+            //    if (kaydirma_cubugu > cubuk_seviye) { $('.sticky').addClass('show');}
+            //    else { $('.sticky').removeClass('show');}
+           
+            //    cubuk_seviye = $(document).scrollTop();
+                
+            //});
+        });
+    </script>
+</body>
+</html>

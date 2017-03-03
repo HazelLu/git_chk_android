@@ -1,0 +1,161 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="reservationD2" data-role="page">
+        <!-- header -->
+<!--         <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none"><i class="icon-chevron-left"></i></a>
+            <h1>預約資訊</h1>
+        </div> -->
+        <!-- /header -->
+        <!-- content -->
+        <div class="reservationD2-content">
+            <input type="hidden" id="hiddenStart" />
+            <input type="hidden" id="hiddenEnd" />
+            <input type="hidden" id="hiddenUser"  />
+            <input type="hidden" id="hiddenPeople" />
+            <input type="hidden" id="hiddenTablet" />
+            <input type="hidden" id="hiddenPoint" />
+            <input type="hidden" id="hiddenPointRule" />
+            <input type="hidden" id="hiddenImmed" />
+            <input type="hidden" id="hiddenDay" />
+            <!-- 隱藏式 header -->
+            <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false" class="_active">
+                <a class="btn-left" data-role="none"><i class="icon-chevron-left"></i></a>
+                <div class="sp_header">
+                    <h1>我要預約的公設</h1>
+                    <div id="">&nbsp;</div>
+                </div>
+            </div>
+            <!-- /隱藏式 header -->            
+            <!-- 上方藍色區塊 -->
+            <div class="contentTop">
+                <div>
+                    <p>我要預約的公設</p>
+                    <h2>&nbsp;</h2>
+                </div>    
+                <i class="facilityImg"></i>
+            </div>
+            <!-- /上方藍色區塊 -->
+            <!-- 主要預約內容選擇資訊 -->
+            <div class="contentMain">
+                <!-- forms box-->
+                <div class="reservationList">
+                    <div class="item">
+                        <h3>日期</h3>
+                        <p class="option" id="res_date">&nbsp;</p>
+                    </div>
+                    <div class="item">
+                        <div class="timeSpace" id="startBtn">
+                            <div class="title">開始時間</div>
+                            <div class="time option" id="res_start">&nbsp;</div>
+                        </div>
+                        <div class="timeSpace" id="dueBtn">
+                            <div class="title">結束時間</div>
+                            <div class="time option" id="res_due">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3>戶別</h3>
+                        <p class="option only" id="tablet_note"></p><!-- 戶別為多戶時移除.only -->
+                    </div>
+                    <div class="item">
+                        <h3>人數</h3>
+                        <p class="option" id="peopleBtn"><span>0</span> 人</p>
+                    </div>
+                </div>
+                <!--<span class="ps" style="top:-20px;">※最低使用時間為<span> 2 </span>小時;扣點計算採戶別制</span>-->
+                <!-- /forms box-->
+                <!-- point box 扣點試算-->
+                <div class="pointCompute">
+                    <div class="title">
+                        <p>
+                            扣點試算
+                            <span class="pointBtn"></span><!-- 採預約扣點制/採進場扣點制 -->
+                        </p>
+                    </div>
+                    <div class="computeWrap">
+                        <div style="margin:0 5px 0 24px;overflow: hidden;">
+                            <div class="dictOption">
+                                <p class="targetName">目前點數</p>
+                                <p><span class="point" id="my_point">0</span>點</p>
+                            </div>
+                            <div class="dictMark"><i class="icon-subtraction"></i></div>
+                            <div class="dictOption use"> <!-- .use 點擊後展開計算方式黃底框 -->
+                                <p class="targetName">使用點數<i class="icon-questions-circular"></i></p>
+                                <p><span class="point" id="this_point">0</span>點</p>
+                            </div>
+                            <div class="dictMark"><i class="icon-equal"></i></div>
+                            <div class="dictOption total">
+                                <p class="targetName">預估剩餘點數</p>
+                                <p><span class="point" id="f_point">0</span>點</p><!-- 點數不足紅字增加.none -->
+                            </div>
+                        </div>
+                        <!-- 點數計算方式黃底框 -->
+                        <!-- 點擊 .use 後將.close改為.open ↓-->
+                        <div class="yellow-tips close">
+                            <div>
+                                <div class="box">
+                                    <p id="pointRule">
+                                       
+                                    </p> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /點數計算方式黃底框 -->
+                    </div>
+                </div>
+                <span class="ps">實際點數計算規則依社區規定為主</span>
+                <!-- /point box 扣點試算-->
+            </div>
+            <!-- /主要預約內容選擇資訊 -->
+        </div>
+        <!-- /content -->
+        <div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <p>確定預約</p> 
+            <!-- a: 確定預約 -->
+            <!-- b: 確定預約（進場扣點 點數不足時，可預約但跳提醒“您的點數不足，是否仍要預約？”） -->
+            <!-- c: 點數不足無法預約（預約扣點 點數不足無法預約加上class="none-reservation"） 灰色按鈕-->
+        </div>
+        <!-- slide up 面版:選擇時間 css已設display:none; -->
+        <div class="overlay" ></div>
+        <div class="selectTimeModal" >
+            <div class="startOverWrap">
+                <div class="col-half startWrap">
+                    <div class="activeBar"></div>
+                    <h3>開始時間</h3>
+                    <p id="res_start2"></p>
+                </div>
+                <div class="col-half endWrap">
+                    <div class="activeBar"></div>
+                    <h3>結束時間</h3>
+                    <p id="res_due2"></p>
+                </div>
+                <div class="selectArrow startActive"></div>
+            </div>
+            <div class="scrollModal">
+                <!-- 開始時間 -->
+                <div class="modalContent startTime">
+                    
+                </div>
+                <!-- /開始時間 -->
+                <!-- 結束時間 -->
+                <div class="modalContent endTime" >
+                    
+                </div>
+                <!-- /結束時間 -->
+            </div>
+            <div class="timeConfirm"> <!-- 選擇結束時間時才顯示 加上class="active" -->
+                <div class="confirmBtn">
+                    <p class="mainText">確認選擇時間</p>
+                    <p class="subText"><span></span>~<span></span></p>
+                </div>
+            </div>
+        </div>
+        <!-- /slide up 面版 : 選擇時間 -->     
+    </div>
+</body>
+</html>

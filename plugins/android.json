@@ -1,0 +1,101 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "865338099412",
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-brightness": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-actionsheet": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-listpicker": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "plugin.google.maps": {
+            "API_KEY_FOR_ANDROID": "AIzaSyC7dXJkI8VZvwqoW_hsKVyQtJxOkyXfgho",
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-calendar": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-clipboard-x": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "phonegap-plugin-mobile-accessibility": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "com.phonegap.plugins.nativesettingsopener": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-googleplus": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1794007497292036",
+            "APP_NAME": "SmartLife",
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-plugin-themeablebrowser": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        },
+        "cordova-open": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "chk.kingnet.app"
+        }
+    }
+}

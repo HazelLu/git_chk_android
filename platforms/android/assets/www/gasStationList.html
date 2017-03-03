@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="gasStationList" data-role="page">
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none"><i class="icon-chevron-left"></i></a>
+            <h1>附近加油站</h1>
+            <a class="btn-right-gas2" data-role="none"><i class="icon-map-location"></i><span>地圖</span></a>
+        </div>
+        <!-- /header -->
+        <!-- content -->
+        <div class="gasStationList-content" data-position="fixed" ><!-- 此div請計算頁面總高度 -->
+            <input type='hidden' id="temp_json" />
+            <!-- 地圖模式 -->
+            <div class="view-map" id="listMap">
+            </div>
+            <!-- /地圖模式 -->
+            <!-- 列表模式 -->
+            <div class="view-list" style="display:block;position: relative;">
+                <ul id="station_list" style="_display:block;">
+                                   </ul>
+                <div class="sorce" style="display:none;">
+                    資料來源: 台灣中油股份有限公司
+                </div><br/><br/>
+                <div class="load-more" >
+                    <div style="position:relative;">
+                        <i class="icon-fuel"></i><span>載入中...</span>
+                        <!-- small-loading div -->
+                        <div class="s-loading" style="display: inline-block;">
+                            <div class="loader-wrapper">
+                                <div class="loader"></div>
+                            </div>
+                        </div>
+                        <!-- /small-loading div -->
+                    </div>
+                </div>
+                <!-- 位置訊息無法取得(已設display:none) -->
+                <div class="locator">
+<br/><br/><br/><br/><br/><br/><br/><br/>
+                        <span class="icon-location-2 size"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+
+                        <span class="txt01">位置訊息無法取得</span>
+                        <span class="txt02">請確認定位服務已經開啟</span>
+                </div>
+                <!-- /位置訊息無法取得 -->
+            </div>
+            <!-- /列表模式 -->
+            <!-- 搜尋條件篩選 -->
+            <div class="view-filter" >
+                <div class="itembox">
+                    <h4>供應油品種類</h4>
+                    <ul>
+                        <li class="active">92</li>
+                        <li>95</li>
+                        <li>98</li>
+                        <li>超級柴油</li>
+                        <li>酒精汽油</li>
+                    </ul>
+                    <h4>服務提供</h4>
+                    <ul>
+                        <li>加水</li>
+                        <li>eTag儲值</li>
+                        <li>充氣</li>
+                    </ul>
+                    <a class="gotofind"><span>開始搜尋</span></a>
+                </div>
+            </div>
+            <!-- /搜尋條件篩選 -->
+        </div>
+        <!-- /content -->
+    </div>
+</body>
+</html>

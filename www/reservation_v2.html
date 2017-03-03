@@ -1,0 +1,164 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="reservation_v2" data-role="page">
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none" href=""><i class="icon-chevron-left"></i></a>
+            <h1>公設預約</h1>
+            <a id="res_online" class="btn-right-submit" data-role="none" style="display:none;"><span>尚未開放</span></a>
+            <a id="res_history" class="btn-right-reservation" data-role="none"><i class="icon-detail"></i>預約明細</a>
+        </div>
+        <!-- /header -->
+        <!-- content -->
+        <div class="reservation-v2-content" data-position="fixed">
+            <!-- 尚未啟用顯示-->
+            <div class="closedWrap" style="display:none;">
+                <img src="img/lock/reservation-ad.png" alt="公設預約服務" />
+                <div class="desc">
+                    <div class="title">
+                        <a href="">
+                            <span>即時預約</span>
+                            <h4>公共設施使用</h4>
+                        </a>
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li>
+                                提供線上即時預約、查詢、取消預約服務
+                            </li>
+                            <li>
+                                預約完成後，系統於預約時間30分鐘前推播通知提醒住戶
+                            </li>
+                            <li>
+                                時間規劃管理好幫手
+                            </li>
+                            <li>
+                                社區管委會即時掌握公設使用情形，管理更便利
+                            </li>    
+                        </ul>
+                        <span class="tips">如有公設預約或其他相關問題，可向社區管委會諮詢。</span>
+                    </div>
+                </div>
+            </div>
+            <!-- /尚未啟用顯示-->
+            <!-- 開放顯示-公設列表 v1.3 -->
+            <div class="listWrap">
+                <!-- 所選其篩選條件 提示區塊 css已設display:none;-->
+                <div class="filterTips">
+                    <div class="filterTips-content">
+                        <div id="ftips">
+                        </div>    
+                        <span class="clear">清除條件</span>
+                    </div>
+                </div>
+                <!-- /所選其篩選條件 提示區塊 -->  
+                <!-- .content計算高度：總高-header-footer -->
+                <!-- 當篩選條件提示區塊.filterTip為display:block時, 加上.pushDiv -->
+                <div class="content" data-position="fixed">
+                    <!-- 我的最愛列表(有其一加入我的最愛時才顯示) css已設display:none; -->
+                    <div id="" class="favoriteList">
+                        <div class="subtitle">
+                            常用<span id="favCount">0</span>
+                            <!-- <i class="icon-chevron-down"></i> -->
+                        </div>
+                        <ul id="heartDomList">
+                        </ul>
+                    </div>
+                    <!-- /我的最愛列表(有其一加入我的最愛時才顯示) css已設display:none; -->
+                    <!-- 公設列表 -->  
+                    <div id="" class="normalList">
+                        <div class="subtitle">
+                            公共設施<span id="norCount">0</span>
+                            <!-- <i class="icon-chevron-down"></i> --> <!-- 縮小列表時加上.active -->
+                        </div>              
+                        <ul id="resDomList">
+                    
+                        <!--運動類 icon-r-sport
+                        休閒類 icon-r-leisure
+                        公共類 icon-r-public
+                        影視類 icon-r-movie
+                        學習類 icon-r-learn
+                        餐飲類 icon-r-foods
+                        其他     icon-r-other --> 
+                        </ul>
+                    </div>    
+                    <!-- /公設列表 -->   
+                </div>
+            </div>
+            <!-- /開放顯示-公設列表 v1.3 -->
+            <!-- 浮動按鈕:篩選條件 (只有一個類別時不顯示)-->
+            <div class="filterBtn"><!-- tap to slide up 篩選條件panel-->
+                篩選條件<i class="icon-controls"></i>
+            </div>
+            <!-- /浮動按鈕:篩選條件 (只有一個類別時不顯示)-->  
+            <!-- slide up 視窗:篩選條件選擇 css已設display:none; -->
+            <div class="filterWrap">
+                <div class="wrapHeader">
+                    <h1>篩選條件</h1>
+                    <i class="icon-close close"></i><!-- tap to slide down panel-->
+                </div>
+                <div class="filterContent">
+                    <h3>
+                        公設類型：
+                        <span>所有分類</span><!-- 預設顯示 所有分類 -->
+                        <!-- <span>已選擇了<span>2</span>個分類</span> -->
+                    </h3>
+                    <!-- (可複選)(共六類) -->
+                    <div class="filtertType">
+                       
+                    </div>
+                    <!-- /(可複選)(共六類) -->
+                </div>
+                <div class="wrapFooter"><!-- tap to slide down panel-->
+                    <p>查看這<span>0</span>個公設</p>
+                </div>
+            </div>
+            <!-- /slide up 視窗:篩選條件選擇 css已設display:none;-->                      
+        </div>
+        <!-- /content -->
+        <!-- footer -->
+        <div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="tab-bar">
+                <ul>
+                    <li>
+                        <a>
+                            <i class="icon-home"></i>
+                            <div>首頁</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-package"></i>
+                            <div>我的包裹</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-barcode"></i>
+                            <div>我的條碼</div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="icon-reservation"></i>
+                            <div>公設預約</div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-more"></i>
+                            <div>更多</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /footer -->
+    </div>
+</body>
+</html>

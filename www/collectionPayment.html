@@ -1,0 +1,100 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="collectionPayment" data-role="page">
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none"><i class="icon-chevron-left"></i></a>
+            <h1>寄放物品</h1>
+            <!-- 資訊+分頁控制 navbar-->
+            <div class="navbar">
+                <ul>
+                    <li><a href="#segmented-div-a" data-role="none"><span>寄件<span class="badge"></span></span></a></li><li><a href="#segmented-div-b" data-role="none"><span>收件<span class="badge"></span></span></a></li><li><a href="#segmented-div-c" data-role="none"><span>已完成</span></a></li>
+                </ul>
+            </div>
+            <!-- /資訊+分頁控制 navbar-->
+        </div>
+        <!-- header -->
+        <!-- content -->
+        <div class="collectionPayment-content" data-position="fixed">
+            <!-- 寄件 -->
+            <div id="segmented-div-a" style="display:block;">
+                <p class="subtitle">貴住戶寄放到管理室的物品</p>
+                <ul class="ul-put">
+                  
+                </ul>
+            </div>
+            <!-- /寄件 -->
+            <!-- 取件 -->
+            <div id="segmented-div-b">
+                <!--title: 領取寄放物品?-->
+                <!--txt: 將前往我的條碼頁面進行寄放物品領取(提醒您系統會自動調整頁面亮度)-->
+                <!--btn: 左:稍後領取 右:立即領取-->
+                <p class="subtitle">他人轉交給貴住戶的物品</p>
+                <ul class="ul-get">
+                   
+                </ul>
+                <span class="tips-div">請持手機條碼到管理室領取<a class="howto2">如何領取物品?</a></span>
+            </div>
+            <!-- /取件 -->
+            <!-- 已完成 -->
+            <div id="segmented-div-c" >
+                <p class="subtitle">寄件、收件已被領取的物品</p>
+                <ul class="ul-done">
+                </ul>
+            </div>
+            <!-- /已完成 -->
+            <!-- 無資料時顯示 -->
+            <div class="empty" >
+                <i class="icon-package"></i>
+                <span>目前尚無資料</span>
+            </div>
+            <!-- /無資料時顯示 -->
+            <!-- /content -->
+        </div>
+        <!-- content -->
+        <!-- footer -->
+        <div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="tab-bar">
+                <ul>
+                    <li>
+                        <a>
+                            <i class="icon-home"></i>
+                            <div>首頁</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-package"></i>
+                            <div>我的包裹</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-barcode"></i>
+                            <div>我的條碼</div>
+                        </a>
+                    </li>
+                    <li  class="active">
+                        <a>
+                            <i class="icon-collectionP"></i>
+                            <div>寄放物品</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-more"></i>
+                            <div>更多</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /footer -->
+    </div>
+</body>
+</html>

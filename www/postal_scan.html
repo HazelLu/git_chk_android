@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="postal_scan" data-role="page">
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none"><i class="icon-chevron-left"></i><span>返回</span></a>
+            <h1>顯示行動條碼</h1>
+        </div>
+        <!-- header -->
+        <!-- content -->
+        <div class="postalScan-content" data-position="fixed">
+            <div id="tips" class="desc_txt">
+                親愛的住戶您好，請持此QR code條碼或一維條碼至管理室領取郵件包裹。<br />
+                <span>*亦可直接使用管理室其簽名板領取</span>
+            </div>
+            <!-- navbar -->
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="#tab_qr"  data-role="none">QR code</a>
+                    </li>
+                    <li>
+                        <a href="#tab_barcode" data-role="none">一維條碼</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+            <!-- navbar content-->
+            <div class="navContentWrap" id="postal_scan_div"><!-- div請計算高度 -->
+                <!-- QRcode -->
+                <div class="container" id="tab_qr">
+                    <div class="postalScanWrap">
+                        <div id="qr_scan" class="QRimg">
+    
+                        </div>
+                         <img class="img-buffer" src="img/applogo-01.png" style="display:none;">
+                        <div class="tips" >
+                            僅需使用行動條碼掃描器對準本行動條碼，
+                            即可將您的郵件包裹領回哦!
+                        </div>
+                    </div>
+                </div>
+                <!-- /QRcode -->
+                <!-- 一維條碼 -->
+                <div class="container" id="tab_barcode" >
+                    <div class="postalScanWrap_sty2">
+                        <div id="code_scan" class="Bimg"></div>
+                        <div class="tips">
+                            僅需使用行動條碼掃描器對準本行動條碼，
+                            即可將您的郵件包裹領回哦!
+                        </div>
+                    </div>
+                </div>
+                <!-- /一維條碼 -->
+            </div>
+            <!-- /navbar content-->
+        </div>
+        <!-- /content -->
+
+    </div>
+</body>
+</html>

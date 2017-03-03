@@ -1,0 +1,108 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="feedbackDetail" data-role="page">
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a  class="btn-left" data-role="none"><i class="icon-chevron-left"></i></a>
+            <h1>您的意見反映</h1>
+        </div>
+        <!-- /header -->
+        <!-- content -->
+        <div class="feedDetail-content" data-position="fixed">
+            <!-- msg -->
+            <div id="msgDiv" class="detailWrap">
+                <div class="detail-h">
+                    <h3>
+                        您的建議  
+                    </h3>
+                    <span class="feedback-time" id="feedback_time"></span>
+                    <!-- 2.0取消 尚未回復/已回覆 -->
+                    <!-- <span></span> -->
+
+                    <!-- 2.0新增 意見反應類別 -->
+                    <span class="tag"></span>                       
+                </div>
+                <div class="detail-c">
+                    <div class="detail-c-txt">
+                        <p id="msg_d_txt">
+                        </p>
+                    </div>
+                    <!-- 2016/08/04 圖片顯示修正為自動裁切 -->
+                    <div class="detail-c-pic">
+                    </div>
+                    <!-- /2016/08/04 圖片顯示修正為自動裁切 -->
+                </div>
+            </div>
+            <!-- /msg -->
+            <!-- reply 有回覆時才顯示-->
+            <div id="replyDiv" class="replyWrap">
+                <div class="user-info">
+                    <div class="icon">
+                        <i class="icon-user"></i>
+                    </div>
+                    <span></span>
+                </div>
+                <div class="txt-panel">
+                    <div class="time">
+                        <span>尚未回覆</span>
+                    </div>
+                    <div class="txt">
+                        <p>
+                        </p>
+                    </div>
+                    <!-- 2016/08/04 新增回復附加圖片 -->
+                    <div class="detail-c-pic">
+
+                    </div>
+                    <!-- /2016/08/04 新增回復附加圖片 -->
+                </div>
+            </div>
+            <!-- /reply -->
+        </div>
+        <!-- /content -->
+               <!-- footer -->
+        <div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="tab-bar">
+                <ul>
+                    <li>
+                        <a>
+                            <i class="icon-home"></i>
+                            <div>首頁</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-package"></i>
+                            <div>我的包裹</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-barcode"></i>
+                            <div>我的條碼</div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a>
+                            <i class="icon-feedback"></i>
+                            <div>意見反映</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-more"></i>
+                            <div>更多</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /footer -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="feedbackEdit_v2" data-role="page">
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none" ><i class="icon-chevron-left"></i></a>
+            <h1>意見反映</h1>
+        </div>
+        <!-- /header -->
+        <!-- content -->
+        <div class="feedbackEdit-v2-content" data-position="fixed">
+            <input type="hidden" id="hiddenType" />
+            <div class="desc_txt">
+                親愛的住戶 您好，<br />社區維護不分你我，大家一起共同維護，對社區有任何建議可提供管委會參考。
+            </div>
+            <!-- form content-->
+            <div class="formWrap">
+
+                <ul>
+                    <li>
+                        <div class="txtWrap">
+                            <label class="subtitle">類別</label>
+                            <!-- .cgyOption 點擊啟動scroll wheel -->
+                            <div class="info cgyOption">
+                                <span>請選擇</span>
+                                <i class="icon-chevron-down"></i>
+                            </div>
+                            <!-- /.cgyOption 點擊啟動scroll wheel -->
+                            <!-- 隨著類別而有不同的提示說明 -->
+                            <div class="cgyTips">  <!--.show控制顯示-->
+                            </div>
+                            <!-- /隨著類別而有不同的提示說明 -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txtWrap">
+                            <label class="subtitle">描述</label>
+                            <div class="info descFill">
+                                <label for="msg">請輸入您的建議 (必填)</label>
+                                <textarea rows="6" cols="50" data-role="none" id="msg"></textarea>
+                                <span class="word">限250字元 / 餘<span id="len_limit">250</span></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txtWrap">
+                            <label class="subtitle">附加照片</label>
+                            <!-- attatchment btn -->
+                            <!--
+                                .attatchPhotoBtn 點擊啟動 action sheet
+                                請選擇取用模式
+                                選擇照片
+                                拍照
+                                取消
+                            -->
+                            <div class="info attatchPhotoBtn show" id="attachmentAdd">  <!--.show控制顯示-->
+                                <span>請選擇照片或拍照</span>
+                                <i class="icon-camera"></i>
+                                <!-- loading div -->
+                                <div class="s-loading">
+                                    <div class="loader"></div>
+                                </div>
+                                <!-- /loading div -->
+                            </div>
+                            <!-- /attatchment btn -->
+                            <!-- photo preview-->
+                            <div class="info attatchPhotoView" id="attachmentShow">  <!--.show控制顯示-->
+                                <span id="attach_del"><i class="icon-close"></i></span>
+                                <div  class="act-image" id="attach_img"/>
+                                <input type='hidden' value=''>
+                                <div class="zoomin">放大瀏覽</div>
+                            </div>
+                            <!-- /photo preview-->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /form content-->
+            <!-- btn -->
+            <div class="submit-btn">
+                <a id="submitBtn" class="btn-act">提交建議</a>
+            </div>
+            <!-- /btn -->
+        </div>
+        <!-- /content -->
+        <!-- footer -->
+        <div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="tab-bar">
+                <ul>
+                    <li>
+                        <a>
+                            <i class="icon-home"></i>
+                            <div>首頁</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-package"></i>
+                            <div>我的包裹</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-barcode"></i>
+                            <div>我的條碼</div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="icon-feedback"></i>
+                            <div>意見反映</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-more"></i>
+                            <div>更多</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /footer -->
+    </div>
+</body>
+</html>

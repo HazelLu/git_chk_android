@@ -1,0 +1,137 @@
+﻿<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+    <title>今網行動管家</title>
+
+</head>
+<body>
+    <div id="reservation" data-role="page">
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none" href=""><i class="icon-chevron-left"></i></a>
+            <h1>公設預約</h1>
+            <a id="res_online" class="btn-right-submit" data-role="none" style="display:none;"><span>尚未開放</span></a>
+             <a id="res_history"  class="btn-right-reservation" data-role="none" style="display:none;"><i class="icon-r-common"></i>預約明細</a>
+        </div>
+        <!-- /header -->
+        <!-- content -->
+        <div class="reservation-content" data-position="fixed">
+            <!-- 尚未開放顯示 -->
+            <div class="closedWrap" style="display:none;">
+                <img src="img/lock/reservation-ad.png" alt="公設預約服務"/>
+                <div class="desc">
+                    <div class="title">
+                        <a href="">
+                            <span>即時預約</span>
+                            <h4>公共設施使用</h4>
+                        </a>
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li>
+                                提供線上即時查詢、預約公設使用
+                            </li>
+                            <li>
+                                貼心提醒公設預約通知，讓時間規劃更便利
+                            </li>
+                            <li>
+                                管委會即時掌握 有效管理公共設施
+                            </li>
+                        </ul>
+                        <span class="tips">如有公設預約或其他相關問題，可向社區管委會諮詢。</span>
+                    </div>
+                </div>
+                    
+                </div>
+            <!-- /尚未開放顯示 -->
+            <!-- 開放顯示 公設列表 --> 
+            <div class="listWrap">
+                <div class="desc_txt">請選擇要預約公設的時間</div>
+                <div class="content" data-position="fixed">
+                    <ul id="reservation_list">
+                      
+                    </ul>
+                </div>
+            </div>
+            <!-- 開放顯示 公設列表-->
+            <!-- 公設詳細介紹 -->
+            <div class="detailWrap">
+                <i class="icon-close close"></i>
+                <div class="container">
+                    <div class="top-area">
+                        <i class="icon-r-gym"></i>
+                        <span id="res_name">健身房</span>
+                    </div>
+                    <div class="mid-area">
+                        <span id="res_count">免扣點數</span>
+                        <!-- btn -->
+                        <div class="submit-btn">
+                            <a id="res_btn" class="btn-default ui-link">我要預約
+                            </a>
+                        </div>
+                        <!-- /btn -->
+                    </div>
+                    <div class="bottom-area">
+                        <p>開放時間</p>
+                        <div>
+                           
+                        </div>
+                        <p>人數上限</p>
+                        <div>
+                            
+                        </div>
+                        <p>使用須知</p>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /公設詳細介紹 -->  
+ 
+        </div>
+        <!-- /content -->
+        <!-- footer -->
+        <div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="tab-bar">
+                <ul>
+                    <li>
+                        <a >
+                            <i class="icon-home"></i>
+                            <div>首頁</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a >
+                            <i class="icon-package"></i>
+                            <div>我的包裹</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a >
+                            <i class="icon-barcode"></i>
+                            <div>我的條碼</div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="icon-reservation"></i>
+                            <div>公設預約</div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a >
+                            <i class="icon-more"></i>
+                            <div>更多</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /footer -->
+</div>
+</body>
+</html>

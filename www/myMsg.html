@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="myMsg" data-role="page">
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none" ><i class="icon-chevron-left"></i></a>
+            <h1>我的訊息</h1>
+            <a id="" class="btn-right-msg" data-role="none"><i class="icon-refresh"></i></a>
+            <!-- navbar -->
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="#segmented-div-a" data-role="none">
+                            <span>社區通知</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#segmented-div-b"  data-role="none">
+                            <span>系統訊息</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /navbar --> 
+        </div>
+        <!-- /header -->       
+        <!-- content -->
+        <div class="myMsg-content" data-position="fixed">
+            <div id="segmented-div-a" style="display:nene;">
+                <!-- 預設活動廣告box -->
+                <div class="activeTopInfo">
+                    <input type='hidden' />
+                    <div>
+                        <i class="icon-close"></i>
+                        <div class="li-wrap">
+                            <div class="info">
+                                <img src="" class="a-icon">
+                                <span class="cgy"></span>
+                                <h4>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="morebtn">
+                        <span>瞭解更多</span>
+                    </div>
+                </div>
+                <!-- /預設活動廣告box -->
+                <!-- 點過瞭解更多或叉叉後的活動box呈現方式 -->
+                <div class="activeTopInfo sm-box">
+                    <!-- css已設display:none; -->
+                    <a>
+                        <div class="li-wrap">
+                            <div class="info">
+                                <img src="" class="a-icon">
+                                <span class="cgy"></span>
+                                <h5>
+                                
+                                </h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /點過瞭解更多或叉叉後的活動box呈現方式 -->                
+                <ul>
+                </ul>
+            </div>
+            <div id="segmented-div-b"><!--css已設display:none;-->
+                <ul>
+                 
+                </ul>
+            </div>
+            <!-- 無資料時顯示 -->
+            <div class="empty">
+                <i class="icon-news"></i>
+                <span>目前尚無推播訊息</span>
+            </div>
+            <!-- /無資料時顯示 -->
+            </div>
+        <!-- /content -->
+        <!-- footer -->
+        <div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="tab-bar">
+                <ul>
+                    <li>
+                        <a>
+                            <i class="icon-home"></i>
+                            <div>首頁</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-package"></i>
+                            <div>我的包裹</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-barcode"></i>
+                            <div>我的條碼</div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a>
+                            <i class="icon-mymsg"></i>
+                            <div>我的訊息</div>
+                        </a>
+                    </li>
+                    <li >
+                        <a>
+                            <i class="icon-more"></i>
+                            <div>更多</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /footer -->
+    </div>
+</body>
+</html>

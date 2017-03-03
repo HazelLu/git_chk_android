@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="announcement" data-role="page">
+        <!--<a id="yy" href="index.html">index</a>-->
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none"><i class="icon-chevron-left"></i></a>
+            <h1>社區公告</h1>
+            <a id="" class="btn-right-ann" data-role="none"><i class="icon-refresh"></i></a>
+              <!-- 公告類型-->
+            <div class="swiper-container gallery-thumbs" id="sg_tb">
+                <div class="swiper-wrapper" id="ann_title">
+
+                </div>
+            </div>
+            <!-- /公告類型-->
+        </div>
+        <!-- /header -->
+        <!-- content -->
+        <div class="annList-content" data-position="fixed">
+          
+            <!-- 公告內容 -->
+            <div class="swiper-container gallery-top" id="sg_t" style="display:none;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <ul id="ann_list">
+                          
+                            <!-- 嵌入廣告 -->
+                            <!--<li class="embed-ad" >
+                                <a id="">
+                                    <div class="info">
+                                        <img src="https://www.kingnet-select.com.tw/images/Ad/banner_c/isp.png">
+                                    </div>
+                                </a>
+                            </li>-->
+                            <!-- /嵌入廣告 -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- 無資料時顯示 -->
+                <div class="empty">
+                    <i class="icon-ann"></i>
+                    <span>目前尚無公告</span>
+                </div>
+                <!-- /無資料時顯示 --> 
+            </div>
+            <!-- 公告內容-->
+            <!--<div class="latest-update">最後更新時間 <span id="">2015/08/19 10:54:20</span></div>-->
+        </div>
+        <!-- /content -->
+           <!-- footer -->
+        <div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="tab-bar">
+                <ul>
+                    <li>
+                        <a >
+                            <i class="icon-home"></i>
+                            <div>首頁</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a >
+                            <i class="icon-package"></i>
+                            <div>我的包裹</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a >
+                            <i class="icon-barcode"></i>
+                            <div>我的條碼</div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="icon-ann"></i>
+                            <div>社區公告</div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a >
+                            <i class="icon-more"></i>
+                            <div>更多</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /footer -->
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+    <title>今網行動管家</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/font-isp-icon.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.css" />
+    <link rel="stylesheet" href="css/kingnet.min.css" />
+    <link rel="stylesheet" href="css/segmented.css" />
+    <link rel="stylesheet" href="css/ios-switch.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/jquery.mobile-1.4.3.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/control.js"></script>
+    <script src="js/jquery.barcode.0.3.js"></script>
+    <script src="js/jquery.qrcode-0.12.0.min.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/socket.io-1.0.3.js"></script>
+    
+</head>
+<body> 
+    <!-- QRCODE、Barcode、序號 登入頁 -->
+    <div id="index" data-role="page" data-theme="a" >
+         <!-- app資料更新讀取 -->
+    <div class="updateLoading">
+        <div class="overlayBG"></div>
+        <div class="loader-wrapper">
+            <img src="img/load/update_logo.png" alt="系統資料更新中" />
+            <div class="text">系統資料更新中...<span id="loadnumber"></span><div class="loader"></div></div>
+        </div>
+    </div>
+    <!-- /app資料更新讀取 -->
+        <!-- 導覽教學 -->
+        <div class="guide">
+            <div class="swiper-container">
+                <div class="uikits" >
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <i id="guide_close" class="icon-close left-top-close"></i>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="screenshot">
+                            <img src="img/welcome/welcome_01.jpg" alt=""/>
+                        </div>
+                        <div class="desc-wrap">
+                            <div class="container">
+                                <p>今網行動管家</p>
+                                <span>一手掌握社區大小事 便利您的生活</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot">
+                            <img src="img/welcome/welcome_02.jpg" alt="" />
+                        </div>
+                        <div class="desc-wrap">
+                            <div class="container">
+                                <p>包裹送達 即時通知</p>
+                                <span>出示手機條碼 取件好便利</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot">
+                            <img src="img/welcome/welcome_03.jpg" alt="" />
+                        </div>
+                        <div class="desc-wrap">
+                            <div class="container">
+                                <p>手機條碼 超商繳費</p>
+                                <span>免帶帳單好便利 顯示繳費情況通知</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot">
+                            <img src="img/welcome/welcome_04.jpg" alt="" />
+                        </div>
+                        <div class="desc-wrap">
+                            <div class="container">
+                                <p>重要公告 即時掌握</p>
+                                <span>會議記錄、活動資訊 一手掌握</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot">
+                            <img src="img/welcome/welcome_05.jpg" alt="" />
+                        </div>
+                        <div class="desc-wrap">
+                            <div class="container">
+                                <p style="margin-bottom: 0.8em;">新手上路 簡單說明</p>
+                                <span><a class="in">開始體驗</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!-- /導覽教學 -->
+        <!-- 主畫面 main -->
+        <div id="main" class="main-content" >
+            <!-- 此div請計算頁面總高度 -->
+            <div class="container">
+                <!-- logo -->
+                <div class="logo-area" > <!-- 總高的30% -->
+                    <!-- 計算此DIV高度與寬度後 分別設定-(高度/2)的margin-top與margin-left -->
+                    <div class="imgWrap" >
+                        <img id="indexImg" src="img/index/logo.png" alt="今網行動管家" />
+                        <!-- 廣告入口 subAD -->
+                        <div class="subAD"> <!--加上.show 為顯示此廣告--> 
+                            <input type="hidden" />
+                            <img src=""/>
+                            <!-- http://202.39.212.221/CHK_APP/img/index/flower-bg.gif -->
+                        </div>
+                        <!-- /廣告入口subAD -->
+                    </div>
+                    <div class="marqueeBar" > <!-- css已設display:none; -->
+                        <div class="adMarquee">
+                            <div class="marqueeIcon">
+                                <i class="icon-news-index"></i>
+                            </div>
+                            <ul class="textSlider">
+                          
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /logo -->
+                <!-- serevice 3d panel-->
+                <div style="width:100%;">
+                <div class="panel-area" ><!-- 總高的70% -->
+                    <div class="guide-b" >
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper" id="brick_main">
+                                <div class="swiper-slide"><!--計算高度-->
+                                    <div class="row">
+                                        <div class="ml">
+                                            <a id="announcement_btn" >
+                                                <div class="nDIV">
+                                                    <img src="img/index/btn/btn_01.jpg" alt=""/>
+                                                    <span class="badge2"></span>
+                                                </div>
+                                            </a>
+                                        </div> 
+                                        <div class="mr">
+                                            <a id="calendar_btn" >
+                                                <div class="nDIV">
+                                                    <img src="img/index/btn/btn_02.jpg" alt=""/>
+                                                    <span class="badge2"></span>
+                                                </div>
+                                            </a>
+                                        </div> 
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="ml">
+                                            <a id="postal_btn">
+                                                <div class="nDIV">
+                                                    <img src="img/index/btn/btn_03.jpg" alt=""/>
+                                                    <span class="badge2"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                         <div class="mr">
+                                            <a id="collection_btn">
+                                                <div class="nDIV">
+                                                    <img src="img/index/btn/btn_04.jpg" alt="" />
+                                                    <span class="badge2"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="ml">
+                                            <a id="mymsg_btn" >
+                                                <div class="nDIV">
+                                                    <img src="img/index/btn/btn_05.jpg" alt="" />
+                                                    <span class="badge2"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="mr">
+                                            <a id="profile_btn" >
+                                                <div class="nDIV">
+                                                    <img src="img/index/btn/btn_06.jpg" alt="" />
+                                                    <!-- <span class="badge"></span> -->
+                                                    <i class="icon-wow myAccount" ></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" id="swiper_2">
+                                    <div class="row">
+                                         <div class="ml">
+                                            <a id="cashflow_btn">
+                                                <div class="nDIV">
+                                                    <img src="img/index/btn/btn_07.jpg" alt="" />
+                                                    <span class="badge2"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                         <div class="mr">
+                                            <a id="gas_btn">
+                                                <div class="nDIV">
+                                                    <img src="img/index/btn/btn_08.jpg" alt="" />
+                                                    <span class="badge2"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="ml">
+                                            <a id="reservation">
+                                                <div class="nDIV">
+                                                    <img src="img/index/btn/btn_09.jpg" alt="" />
+                                                     <span class="badge2"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="mr">
+                                            <a id="easylife_btn">
+                                                <div class="nDIV">
+                                                    <img src="img/index/btn/btn_10.jpg" alt="" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="ml">
+                                            <a id="feedback_btn">
+                                                <div class="nDIV">
+                                                    <img src="img/index/btn/btn_13.jpg" alt="" />
+                                                    <span class="badge2"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="mr">
+                                            <a id="more">
+                                                <div class="nDIV">
+                                                    <img src="img/index/btn/btn_12.jpg" alt="" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                               
+                            </div>
+
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination" style="display:none;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- /serevice 3d panel -->
+                <!-- footer -->
+                <div class="footer-area">
+                    <a id="main_scan"><img src="img/index/myBarcode.png" alt=""/></a>
+                </div>
+                <!-- /footer -->
+            </div>
+        </div>
+        <!-- /主畫面 main -->
+        <!-- 開通身分引導(1.我的條碼) -->
+        <div class="guide-myBarcode-content">
+            <div class="container">
+                <img src="img/guide/guide_pass.png" />
+            </div>
+        </div>
+        <!-- /開通身分引導(1.我的條碼) -->        
+        <!-- back tips -->
+        <div class="backTips">
+            離開請再按一下返回鍵
+        </div>
+        <!-- /back tips -->
+    </div>
+
+
+    <!-- /QRCODE、Barcode、序號 登入頁 -->  
+    <div class="loadingBG"></div>
+
+    <!-- loading div -->
+        <div class="loading">
+            <div class="loader-wrapper">
+                <div class="loader"></div>
+                <div class="txt">讀取中</div>
+            </div>
+        </div>
+    <!-- /loading div -->
+
+    <!-- 無網路連線時操作教學 -->
+    <div id="alert_box" class="alert-content">
+        <!-- 此div請計算頁面總高度 -->
+        <div class="container">
+            <div class="info" id="no_online_info">
+                <div class="txt">
+                    <span>
+                        目前沒有網路連線<br />
+                        請檢查你的網路並再試一次
+                    </span>
+                    *小貼心<br />
+                    您仍可在無網路服務的環境下至管理室掃描條碼，
+                    待有網路連線時將自動綁定或點擊頁面右上方重新連線綁定按鈕即可。
+                </div>
+                <div class="btn" id="alertdo">我知道了</div>
+            </div>
+            <div class="info" id="no_login_info">
+                <div class="txt">
+                    <span>
+                        目前尚未開通
+                    </span>
+                    請您攜帶手機到管理室，出示「我的條碼」立即開通信件包裹、公告、管理費等社區e化服務！
+                </div>
+                <div class="btn" id="openApp">前往開通</div>
+            </div>
+        </div>
+    </div>
+    <!-- /無網路連線時操作教學 -->
+</body>
+</html>
+

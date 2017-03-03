@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="profile" data-role="page">
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
+            <a class="btn-left" data-role="none" ><i class="icon-chevron-left"></i></a>
+            <h1>個人資訊</h1>
+        </div>
+        <!-- /header -->
+        <!-- content -->
+        <div class="profile-content" data-position="fixed">
+            <!-- 2016/11/19修改 -->
+            <div class="listview" style="margin-top:1em;">
+                <ul>
+                    <li>
+                        <a>
+                            <p>包裹收件人姓名</p>
+                            <div class="mark_txt"><i class="icon-wow2"></i></div>
+                        </a>
+                    </li>
+                </ul>
+                <span class="tips">一支手機僅能設定一個姓名，如家中其他成員需享有e化服務，請攜帶手機至管理室開通。</span>
+            </div>
+            <div class="listview">
+                    <ul>
+                    <li>
+                        <a>
+                            <p>包裹僅限本人領取</p>
+                            <div id="privacy_btn" class="checkItem off"> <!--class="checkItem on"-->
+                                <span>尚未啟用</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <span class="tips">若隱私功能設定啟用，您的包裹將僅限於本人持手機領取，無法由他人代領；包裹相關等資料也僅顯示於您本人手機。</span>
+                <!-- alert : 啟用隱私設定  您的包裹將僅限於本人持手機個人識別條碼領取，無法由他人代領；包裹相關等資料也僅顯示於您本人手機。  (取消)(確定)-->
+                <!-- alert : 取消隱私設定  請注意您近三日的歷史包裹相關資訊將恢復顯示於其他綁定手機。為繼續保障您的隱私可至包裹列表中取消單一包裹隱私，謝謝。  (取消)(確定)-->
+            </div>
+            <div class="listview">
+                <ul class="pushSetting">
+                    <li>
+                        <a>
+                            <p><span>訊息通知設定</span></p>
+                        </a>
+                    </li>
+                </ul>
+                <span class="tips">請確認您的通知是否開啟，若設定關閉，您的手機將無法收到通知。</span>
+            </div>
+            <div class="listview" style="margin-bottom:0;">
+                <p class="subtitle">我的戶別</p>
+                <div class="sp_info" id="p_community">
+
+                </div>
+            </div>
+            <div class="gotoQA">
+                <span>點我看APP使用說明>></span>
+            </div>
+            <!-- <p class="title">基本資料</p>-->
+            <div class="base_info" style="display:none;">
+                <p id="titleMail_btn">
+                    <span class="subtitle">您的Email</span>
+                    <span style="display: block; width: 90%;">尚未設定</span>
+                    <i class="icon-edit edit"></i>
+                    <!-- 彈跳: 請輸入您的Email-->
+                </p>
+                <p id="titlePhone_btn">
+                    <span class="subtitle">您的手機/電話號碼</span>
+                    <span style="display: block; width: 90%;">尚未設定</span>
+                    <i class="icon-edit edit"></i>
+                    <!-- 彈跳: 請輸入您的手機/電話號碼-->
+                </p>
+            </div>
+        </div>
+        <!--- /content --->
+                <!-- footer -->
+        <div id="footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="tab-bar">
+                <ul>
+                    <li>
+                        <a>
+                            <i class="icon-home"></i>
+                            <div>首頁</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-package"></i>
+                            <div>我的包裹</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-barcode"></i>
+                            <div>我的條碼</div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="icon-men-admin-s"></i>
+                            <div>個人資訊</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="icon-more"></i>
+                            <div>更多</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /footer -->
+    </div>
+</body>
+</html>

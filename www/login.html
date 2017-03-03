@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="login" data-role="page" data-theme="a">
+        <!-- 2 choice 1 content -->
+        <div class="login-content">
+            <!-- 此div請計算總高度 -->
+            <!-- 頂部形象區塊 -->
+            <div class="top_area">
+                <!-- 此div請計算高度 (35%) -->
+                <div class="logo">
+                    <!-- 此div請計算總高度給予height, margi
+                    n-top:-(height/2)px -->
+                    <div>
+                        <img src="img/login/applogo-A.png" />
+                    </div>
+                </div>
+             
+                <div class="help">
+                    <!--<a href="announcement.html">需要協助嗎?</a>-->
+                    <span class="txt">調整亮度</span>
+                      <div class="switch">
+                        <input id="bright_cbx" class="cmn-toggle cmn-toggle-round" type="checkbox" data-role="none" checked="checked">
+                        <label for="bright_cbx"></label>
+                    </div>
+
+                </div>
+
+                <div class="collapse">
+                    <i class="icon-close" id="loginDown"></i>
+                </div>
+            </div>
+            <!-- /頂部形象區塊 -->
+            <!-- 掃描區塊 -->
+            <div class="scan_area" id="scanarea" >
+                <!-- navbar -->
+                <div class="navbar">
+                    <ul>
+                      
+                        <li>
+                            <a href="#tab1" data-role="none" class="active">一維條碼</a>
+                        </li>
+                          <li>
+                            <a href="#tab2" data-role="none">QR code</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /navbar -->
+                <!-- navbar content-->
+                <div class="navContentWrap" id="scanDiv">
+                    <!-- 此div請計算高度 (65%-navbar) -->
+                    <div style="position:relative;">
+                              <!-- 一維條碼 Barcode -->
+                        <div class="container" id="tab1" >
+                            <div style="padding:10% 0;">
+                                <div class="top-tips">
+                                    <div>請管理室人員掃描條碼</div>
+                                    <span><i class="icon-scanner"></i>開通身份/領取包裹/公設預約</span>
+                                </div>
+                                <div class="indexWrap_sty2">
+                                    <div class="label">
+                                        <div id="code3" class="Bimg" ></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tips">
+                                <a href="" class="otherBtn">我要使用序號開通<span class="icon-circle-r-arrow"><span class="path1"></span><span class="path2"></span></span></a>
+                            </div>
+                        </div>
+                        <!-- /一維條碼 Barcode -->
+                        <!-- QRcode -->
+                        <div class="container" id="tab2" style="display:none;">
+                             <div style="padding:10% 0 8%;">
+                                <div class="top-tips">
+                                    <div>請管理室人員掃描條碼</div>
+                                    <span><i class="icon-scanner"></i>開通身份/領取包裹/公設預約</span>
+                                </div>
+                                <div class="indexWrap">
+                                    <div id="qr" class="QRimg"></div>
+                                    <img class="img-buffer" src="img/QR-code_LOGO_BK02.png" style="display:none;">
+                        
+                                </div>
+                            </div>
+                            <div class="tips">
+                                <a href="" class="otherBtn">我要使用序號開通<span class="icon-circle-r-arrow"><span class="path1"></span><span class="path2"></span></span></a>
+                            </div>
+                        </div>
+                        <!-- /QRcode -->
+                  
+                    </div>
+                </div>
+                <!-- /navbar content-->
+                   <!-- 新手引導教學(個人識別條碼) -->
+                <div  class="guide-content" id="gc" >
+                    <div class="container" style="margin: 25px auto 0;">
+                        <img src="img/guide/guide_people.png" />
+                        <img src="img/guide/guide_scan.png" class="scan-area"/>
+                    </div>
+                </div>
+                <!-- /新手引導教學(個人識別條碼) -->
+                <!-- 無法連接網路 -->
+                <div class="navContentWrap" style="display:none;" id="no_online">
+                    <!-- 此div請計算高度 (65%-navbar) -->
+                    <div class="container">
+                        <div class="msg-box">
+                            <!-- 此div請計算總高度給予height, margin-top:-(height/2)px -->
+                            <span>
+                                目前沒有網路連線<br />
+                                請檢查你的網路並再試一次<br />
+                            </span>
+                            <a href="" class="refreshBtn"><i class="icon-arrow-sync"></i>再點一下重試</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /無法連接網路 -->
+            </div>
+            <!-- /掃描區塊 -->
+        </div>
+        <!-- /2 choice 1 content -->
+    </div>
+</body>
+</html>
