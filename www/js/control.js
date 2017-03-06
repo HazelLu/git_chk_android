@@ -250,7 +250,9 @@ $(function () {
     //window.localStorage.removeItem('profileInfo');
    // window.localStorage.removeItem('activeMsg');
 
-   
+
+
+
     _tmpHeight=_dm.height();
     _htmlBody=$('html,body');
     //首頁
@@ -2039,7 +2041,8 @@ document.removeEventListener("backbutton",_onBackPageAnn, false);
         success: function(datas){
             $.each(datas, function (i, v) {
                $('#annDetail_title').text(v.title);
-               $('#annDetail_sub').text(v.create_date +' '+ v.type);
+               // $('#annDetail_sub').text(v.create_date +' '+ v.type);
+               $('#annDetail_sub').html(v.create_date +' <span>'+ v.type + '</span>');
                $('#annDetail_txt').html(v.detail);
                if(v.image!=''){
                     image=v.image;
@@ -5729,7 +5732,7 @@ $.getJSON(app._getActivityOpenDataByLat(position.coords.latitude,position.coords
 }).on('pageinit','#feedbackEdit_v2',function(e) { 
     var fb=$(this);
     var fbe=this;
-    var arr=['其他建議','公設異常','檢舉申訴','居家報修','社區管理建議','App問題與建議'];
+    var arr=['其他建議','公設問題','檢舉申訴','居家報修','社區建議回饋','App問題與建議',];
     var par=app._getUrlParameters(fb.data("url"), ''); 
         app._footerShow('feedbackEdit.html',this.id);
        app._registerLabelInput(fb);

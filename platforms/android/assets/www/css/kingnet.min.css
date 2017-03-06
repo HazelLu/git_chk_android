@@ -3382,9 +3382,10 @@ body {background-color:#f1f1f3;
 #announcementDetail {background-color: #f1f1f3;}
 .annDetail-content{position: relative;}
 .annDetail-content .detailWrap{margin:10px;border:1px solid #e5e5e5;padding:15px;background-color: #fff;margin-bottom:10px;position:relative;}
-.annDetail-content .detailWrap .detail-h{border-bottom: 1px solid #eaeaea;margin-bottom:10px;}
-.annDetail-content .detailWrap .detail-h h3{font-size: 17px;color: #125687;font-weight: 500;line-height: 1.2;}
-.annDetail-content .detailWrap .detail-h span{color:#999;font-size:15px;font-weight:normal;display:block;margin: 0.5em 0;text-align: right;}
+.annDetail-content .detailWrap .detail-h{border-bottom: 1px solid #eaeaea;margin-bottom:10px;margin-top: 5px;}
+.annDetail-content .detailWrap .detail-h h3{font-size: 17px;color: #125687;font-weight: 700;line-height: 1.5;}
+.annDetail-content .detailWrap .detail-h span{color:#999;font-size:15px;font-weight:normal;display:block;margin: 0 0 0.3em;text-align: right;}
+.annDetail-content .detailWrap .detail-h span span { border: 1px solid #e5e5e5; padding: 3px 8px 1px; border-radius: 20px; vertical-align: baseline; display: inline-block; font-size: 13px; vertical-align: 1px;}
 .annDetail-content .detailWrap .detail-c{font-size: 15px;line-height: 1.3;color:#4c4c4c;}
 .annDetail-content .detailWrap .detail-c .detail-c-txt{margin-bottom: 10px;}
 .annDetail-content .detailWrap .detail-c .detail-c-txt ul li{list-style:disc inside;}
@@ -3685,7 +3686,7 @@ body {background-color:#f1f1f3;
 .feedDetail-content .detailWrap .detail-h h3{font-size: 17px;color: #125687;font-weight: 500;line-height: 1.2;margin-bottom: 0.1em;}
 .feedDetail-content .detailWrap .detail-h .feedback-time {color:#999;font-size:15px;font-weight:normal;text-align: left;}
 ._feedDetail-content .detailWrap .detail-h .tag{background-color: #8cc631;color: #fff;padding: 4px 0.6em 2px;font-size: 13px;/* margin-left: 0.2em; */font-weight: normal;display: inline-block;vertical-align: initial;}
-.feedDetail-content .detailWrap .detail-h .tag {border: 1px solid #e5e5e5;padding: 2px 8px 1px;border-radius: 20px;vertical-align: bottom;display: inline-block;font-size: 13px;color: #999;}
+.feedDetail-content .detailWrap .detail-h .tag {border: 1px solid #e5e5e5;padding: 3px 8px 1px;border-radius: 20px;vertical-align: 1px;display: inline-block;font-size: 13px;color: #999;}
 .feedDetail-content .detailWrap .detail-h .green{border: 1px solid #8cc631;background-color:#8cc631;color: #fff;}
 .feedDetail-content .detailWrap .detail-c{font-size: 15px;line-height: 1.3;color:#4c4c4c;}
 .feedDetail-content .detailWrap .detail-c .detail-c-txt p{line-height:1.3;margin: 15px 0 0;}
@@ -4740,12 +4741,16 @@ body {background-color:#f1f1f3;
 .easylife-content ul li .name{}
 .easylife-content ul li .name img{width:75px;float:left;margin-top: 12pt;}
 .easylife-content ul li .name .info{padding: 8pt 0 8pt 68pt;max-height: 100px;height: 85px;}
-.easylife-content ul li .name .info > h4{font-size: 17px;color: #4c4c4c;height: 17px;margin-bottom: 6px;margin-top: 1em;font-weight: 600;}
+.easylife-content ul li .name .info > h4{font-size: 17px;color: #4c4c4c;height: 17px;margin-bottom: 6px;margin-top: 0.5em;font-weight: 600;position: relative;padding-right: 8pt;}
 .easylife-content ul li .name .info > p{font-size: 15px;color: #999;margin-right: 8pt;line-height:1.3;}
 .easylife-content ul li .name .info > a {background-color:#8cc63e;color:#fff;padding: 0.4em 0.8em;font-size: 15px;border-radius: 3px;  display: inline-block;margin-right: 5px;}
 .easylife-content ul li .name .info > a.more{background-color:#f4b947;}
 .easylife-content ul li .name i{color: #999;font-size: 15px;}
 .easylife-content ul li:last-child .name {border:0;}
+.easylife-content ul li .build .info{height: auto;padding-bottom: 16pt;}
+.easylife-content ul li .build .info > h4{height: auto;line-height:1.4;}
+.easylife-content ul li .build .info > h4 span{color: #398fd1; border: 1px solid #398fd1; border-radius: 50em; font-size: 11px; padding: 1px 6px 0; margin-right: 5px; vertical-align:1px;}
+.easylife-content ul li .build .build-img{width:75px;height:75px;background:url(http://i.imgur.com/BfqeIqI.jpg);background-position:center center;background-size:cover;width:75px;height:75px;float: left;margin-top: 12pt;}
 
 
 
@@ -5187,25 +5192,92 @@ transition: top .5s;
 .open{transition: top .5s;display:block !important; top:0!important;}
 
 
+/***************************************
+ * file:  mycommunity_v2.html
+ * note:  社區基本資料 v1.4
+ *****************************************/
+#mycommunity_v2 { background-color: #f1f1f3; }
+#mycommunity_v2 #header {transition: top .5s;width: 100%;background: #000;z-index: 100;/* display: none; */top: 0;/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#999999+0,000000+100&0.65+0,0+100 */
+background: -moz-linear-gradient(top, rgba(50,50,50,0.35) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(50,50,50,0.35) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(50,50,50,0.35) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6999999', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */}
+#mycommunity_v2 #header h1{ font-size: 20px;}
+#mycommunity_v2 #header a{position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    width: 70px;
+    padding-right: 10px;
+    font-size: 20px;}
+ #mycommunity_v2 #header a i{width: 36px;
+    font-size: 36px;
+    color: #fff;
+    position: relative;
+    padding-left: 0.3em;
+    line-height: 52px;
+    text-shadow: 1px 1px 7px -5px #555;}
+.mycommunity_v2-content { position: relative; background-color: #f1f1f3; overflow-y: scroll;-webkit-overflow-scrolling: touch; }
+.mycommunity_v2-content .subHeader { }
+.mycommunity_v2-content .subHeader a i {font-size: 36px;color: #fff;position: fixed;padding-left: 0.3em;padding-right: 20px;line-height: 52px;z-index: 100;top: 0;}
+.mycommunity_v2-content .picWrap { position: relative; _height:250px;background-color:#fff; }
+.mycommunity_v2-content .picWrap img { width: 100%; display: block; _height:250px;margin: 0 auto; }
+.mycommunity_v2-content .titleWrap { _border-bottom: 1px solid #e5e5e5; background-color: #125687; }
+.mycommunity_v2-content .titleWrap .txt-box {font-size: 21px;color: #3c3c3c;padding: 20px 0 18px;margin: 0 12pt;font-weight: 600;}
+.mycommunity_v2-content .titleWrap .txt-box h3 {display: block;font-size: 19px;margin-bottom: 6px;color: #fff;}
+.mycommunity_v2-content .titleWrap .txt-box span { display: block; font-size: 15px; color: #398fd1; font-weight: 500; }
+.mycommunity_v2-content .infoWrap { }
+.mycommunity_v2-content .infoWrap .subtitle2 { text-align: left; line-height: 1.3; color: #858585; font-size: 13px; padding: 1.5em 0 0.5em 12pt; font-weight: 600; padding-top: 0; }
+.mycommunity_v2-content .infoWrap ul {background-color: #fff;list-style: none;color: #4c4c4c;margin-bottom: 10px;border-top: 1px solid #eaeaea;border-bottom: 1px solid #eaeaea;}
+.mycommunity_v2-content .infoWrap ul li { position: relative; padding-left: 12pt; }
+.mycommunity_v2-content .infoWrap ul li a { text-decoration: none; display: -webkit-flex; display: flexbox; border-bottom: 1px solid #eaeaea; font-size: 15px; color: #4c4c4c; font-weight: 500; }
+.mycommunity_v2-content .infoWrap ul li:last-child a { border-bottom: 0; }
+.mycommunity_v2-content .infoWrap ul li a p { font-weight: 500; }
+
+/*社區基本資料*/
+.mycommunity_v2-content .infoWrap ul.basic { margin-top: 0; }
+.mycommunity_v2-content .infoWrap ul.basic li:active { background-color: #f7f7f7; }
+.mycommunity_v2-content .infoWrap ul.basic li a p { line-height: 1.4; width: 85%; padding: 13px 0; font-weight: 500; }
+.mycommunity_v2-content .infoWrap ul.basic li a i { position: absolute; right: 8pt; top: 50%; color: #125687; font-size: 22px; margin-top: -11px; }
+.mycommunity_v2-content .infoWrap ul.basic li.fax:active { background-color: #fff; }
+.mycommunity_v2-content .infoWrap ul.basic li.fax .subtitle{color: #999;padding-right: 10pt;}
+.mycommunity_v2-content .infoWrap ul.basic li.fax .subtxt{display:inline-block;}
+.mycommunity_v2-content .infoWrap ul.basic li.fax span { line-height: 1.4; padding: 13px 0; font-weight: 500; }
+
+/*社區週邊店家*/
+.mycommunity_v2-content .infoWrap ul.storeCgy {width: 100%;overflow: hidden;display: block;padding-top: 30px;padding-bottom: 15px;border-top: 1px solid #e5e5e5;border-bottom: 0;margin-top: 15px;margin-bottom: 40px;}
+.mycommunity_v2-content .infoWrap ul.storeCgy li {width: 33.33%;float: left;padding-left: 0;margin-bottom: 30px;}
+.mycommunity_v2-content .infoWrap ul.storeCgy li a { border-bottom: 0; display: block; }
+.mycommunity_v2-content .infoWrap ul.storeCgy li a:active{opacity: 0.8;}
+.mycommunity_v2-content .infoWrap ul.storeCgy li a i { vertical-align: middle; display: block; margin: 0 auto; font-size: 36px; text-align: center; color: #215D89;margin-bottom: 5px; }
+.mycommunity_v2-content .infoWrap ul.storeCgy li img { vertical-align: middle; display: block; margin: 0 auto; }
+.mycommunity_v2-content .infoWrap ul.storeCgy li span.name {text-align: center;display: block;margin-top: 10px;font-size: 13px;font-weight: 600;}
+.mycommunity_v2-content .storeWrap {}
+.mycommunity_v2-content .storeWrap .subtitle2{position:absolute;top: 25px;left: 50%;margin-left: -55px;background-color: #fff;padding: 2px 0;color: #999;width: 110px;text-align: center;letter-spacing:1px;}
+.mycommunity_v2-content .storeWrap .store-box{background-color:#fff;position:relative;border-top: 0.5px solid #e5e5e5;border-bottom: 1px solid #eaeaea;}
+.mycommunity_v2-content .storeWrap .store-box div{margin:0 auto;width:90%;background-color:#fff;padding-top: 20px;}
+
+
 
 /***************************************
  * file:  myCommunityStore.html
  * note:  社區合作廠商
  *****************************************/
 #myCommunityStore {background-color:#f1f1f3;}
-.myCommunityStore-content{position: relative;}
-.myCommunityStore-content ul{list-style: none;background-color:#fff;border-bottom: 1px solid #eaeaea;}
+.myCommunityStore-content{position: relative;overflow-y: scroll;-webkit-overflow-scrolling: touch;}
+.myCommunityStore-content ul{list-style: none;background-color:#fff;border-bottom: 0.5px solid #e5e5e5;}
 .myCommunityStore-content ul li{position:relative;}
 .myCommunityStore-content ul li:active{background-color:#f7f7f7;}
 .myCommunityStore-content ul li a{text-decoration: none;display:-webkit-flex;display:flexbox;color:#4b4b4b;border-bottom: 1px solid #eaeaea;margin-left: 15pt;}
 .myCommunityStore-content ul li:last-child a{border-bottom:0;}
-.myCommunityStore-content ul li .info{padding: 12pt 0 12pt 0;}
-.myCommunityStore-content ul li .info > h4{height: 17px;margin-right: 5px;margin-bottom: 5px;line-height: 1.3;font-size: 15px;color: #4c4c4c;font-weight: 500;}
-.myCommunityStore-content ul li .info > p{margin-right: 8pt;line-height:1.3;font-size: 13px;color: #999;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;/* margin-top: 0.15em; */}
+.myCommunityStore-content ul li .info{padding: 14pt 0 10pt 0;}
+.myCommunityStore-content ul li .info > h4{height: 17px;margin-right: 5px;margin-bottom: 10px;line-height: 1.3;font-size: 17px;color: #215D89;font-weight: 600;}
+.myCommunityStore-content ul li .info > p{margin-right: 8pt;line-height: 1.4;font-size: 13px;color: #999;overflow: hidden;}
 .myCommunityStore-content ul li .info > a {background-color:#8cc63e;color:#fff;padding: 0.4em 0.8em;font-size: 15px;border-radius: 3px;  display: inline-block;margin-right: 5px;}
 .myCommunityStore-content ul li .info > a.more{background-color:#f4b947;}
 .myCommunityStore-content ul li .info i{color: #999;font-size: 15px;}
 .myCommunityStore-content .tips-div-a{color: #858585;font-size: 13px;display: block;padding: 6px 10px 30px 5px; text-align: right;line-height:1.2;margin-bottom:30px;}
+
 
 
 

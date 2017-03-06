@@ -1,0 +1,135 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+    <title>今網行動管家</title>
+</head>
+<body>
+    <div id="mycommunity_v2" data-role="page">
+        <!-- header -->
+        <!--<div id="header" data-role="header" data-position="fixed" data-tap-toggle="false" class="sticky" style="display:none;">
+            <a href="gasStationList.html" class="btn-left" data-role="none"><i class="icon-chevron-left"></i></a>
+            <h1></h1>
+        </div>-->
+        <!-- /header -->
+        <!-- content -->
+        <div class="mycommunity_v2-content" data-position="fixed">
+            <div id="header" class="sticky" style="">
+                <a href="moreList.html" class="ui-link">
+                    <i class="icon-chevron-left"></i>
+                </a>
+                <h1></h1>
+            </div>
+            <!-- <div class="subHeader">
+                <a href="moreList.html"><i class="icon-chevron-left"></i></a>
+            </div> -->
+            <div class="picWrap">
+                <img src="http://i.imgur.com/BfqeIqI.jpg" alt="" />
+            </div>
+
+            <div class="titleWrap">
+                <div class="txt-box">
+                    <h3 class="r-cgy">今網企業大樓</h3>
+                    <span>精匠建設</span>
+                </div>
+            </div>
+            <div class="infoWrap">
+                <ul class="basic">
+                    <li>
+                        <a>
+                            <p>42047 台中市南區東興路一段36號1樓一段36號1樓一段36號1樓</p>
+                            <i class="icon-pin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <p>04-22974588</p>
+                            <i class="icon-phone"></i>
+                        </a>
+                    </li>
+                    <li class="fax">
+                        <a>
+                            <span class="subtitle">傳真</span>
+                            <span class="subtxt">0422974588</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="infoWrap storeWrap">
+                <div class="store-box">
+                    <p class="subtitle2">社區週邊店家</p>
+                    <div>
+                        <ul class="storeCgy">
+                            <li>
+                                <a href="myCommunityStore.html">
+                                    <i class="icon-foods"></i>
+                                    <span class="name">餐飲<span>(10)</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <i class="icon-shopping-bag"></i>
+                                    <span class="name">消費購物<span>(10)</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <i class="icon-house"></i>
+                                    <span class="name">居家生活<span>(10)</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <i class="icon-car"></i>
+                                    <span class="name">交通<span>(10)</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <i class="icon-edu"></i>
+                                    <span class="name">教育<span>(10)</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <i class="icon-fun"></i>
+                                    <span class="name">娛樂<span>(10)</span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /content -->
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100 && !$('#header').hasClass('open')) {
+                    $('#header').addClass('open');
+                    //$('#header').show();
+                } else if ($(this).scrollTop() <= 100) {
+                    $('#header').removeClass('open');
+                    //$('#header').hide();
+                }
+            });
+            //var cubuk_seviye = $(document).scrollTop();
+            //var header_yuksekligi = $('.sticky').outerHeight();
+
+            //$(document).scroll(function () {
+            //    var kaydirma_cubugu = $(document).scrollTop();
+            //    if (kaydirma_cubugu > header_yuksekligi) { $('.sticky').removeClass('hide');}
+            //    else { $('.sticky').addClass('hide');}
+
+            //    if (kaydirma_cubugu > cubuk_seviye) { $('.sticky').addClass('show');}
+            //    else { $('.sticky').removeClass('show');}
+
+            //    cubuk_seviye = $(document).scrollTop();
+
+            //});
+        });
+    </script>
+</body>
+
+</html>
