@@ -80,6 +80,9 @@
 .icon-coin-pu:before {
   content: "\e9a7";
 }
+.icon-heart-nonfull:before {
+  content: "\e9b6";
+}
 .icon-heart-full:before {
   content: "\e9a6";
 }
